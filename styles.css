@@ -5,33 +5,63 @@ body {
     background-color: #f0f0f0;
 }
 
-header, footer {
+header {
     background-color: #333;
     color: white;
-    text-align: center;
     padding: 1em 0;
 }
 
 nav {
     background-color: #444;
-    padding: 1em;
-    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Align items on both sides */
+    align-items: center; /* Center items vertically */
+    padding: 0 2em;
 }
 
-nav a {
+.menu-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%; /* Make sure it takes the full width */
+    justify-content: space-between; /* Spread out the home and right-links */
+}
+
+.home-link {
+    margin-right: auto; /* Align the home link to the left */
+}
+
+.right-links {
+    display: flex;
+    gap: 1em; /* Add some space between the right links */
+}
+
+.right-links li {
+    list-style: none;
+}
+
+.right-links a {
     color: white;
-    margin: 0 1em;
     text-decoration: none;
 }
 
-nav a:hover {
+.right-links a:hover {
     text-decoration: underline;
 }
 
-main {
+main, section {
     padding: 2em;
     background-color: white;
     margin: 1em auto;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
 }
