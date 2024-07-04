@@ -1,9 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
+    background-color: #041127;
+    color: #CCD6F6;
+    font-family: 'Roboto', sans-serif;
+  }
 
 header {
     background-color: #333;
@@ -34,7 +33,7 @@ nav {
 
 .right-links {
     display: flex;
-    gap: 1em; /* Add some space between the right links */
+    gap: 2em; /* Add some space between the right links */
 }
 
 .right-links li {
@@ -65,3 +64,97 @@ footer {
     padding: 1em 0;
     margin-top: 2em;
 }
+
+main {
+    background-color: #011a39;  
+    color: #CCD6F6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+section {
+    background-color: #011a39;  
+    color: #CCD6F6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  
+  #projects {
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #CCD6F6;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    position: relative;
+    background-color: #0e2143;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-title {
+    color: #64FFDA;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    background-color: rgba(10, 25, 47, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    color: #CCD6F6;
+  }
+  
+  .project-tech-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-tech-list li {
+    background-color: #233554;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .project-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .project-image:hover img {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  
