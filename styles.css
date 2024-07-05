@@ -5,13 +5,13 @@ body {
   }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #151515;
+    color: #CCD6F6;
     padding: 1em 0;
 }
 
 nav {
-    background-color: #444;
+    background-color: #121212;
     display: flex;
     justify-content: space-between; /* Align items on both sides */
     align-items: center; /* Center items vertically */
@@ -41,7 +41,7 @@ nav {
 }
 
 .right-links a {
-    color: white;
+    color: #CCD6F6;
     text-decoration: none;
 }
 
@@ -51,15 +51,15 @@ nav {
 
 main, section {
     padding: 2em;
-    background-color: white;
+    background-color: #CCD6F6;
     margin: 1em auto;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #121212;
+    color: #CCD6F6;
     text-align: center;
     padding: 1em 0;
     margin-top: 2em;
@@ -138,14 +138,12 @@ section {
     border-radius: 4px;
     font-size: 14px;
   }
-  
   .project-image {
     position: relative;
-    width: 400px;
+    width: 450px;
     height: auto;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s, opacity 0.3s;
   }
   
   .project-image img {
@@ -155,7 +153,22 @@ section {
     transition: transform 0.3s, opacity 0.3s;
   }
   
-  .project:hover .project-image img {
+  .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 1, 0.5);  /* Initial state with color overlay */
+    transition: background-color 0.3s;
+  }
+  
+  .project-image:hover::after {
+    background-color: rgba(0, 0, 0, 0);  /* Remove overlay on hover */
+  }
+  
+  .project-image:hover img {
     opacity: 0.8;  /* Adjust opacity for hover effect */
     transform: scale(1.2);  /* Expand image */
   }
