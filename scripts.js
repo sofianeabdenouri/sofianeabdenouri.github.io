@@ -15,14 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-/*
-    // Example of adding dynamic content
-    var mainContent = document.querySelector('main');
-    var newContent = document.createElement('div');
-    newContent.innerHTML = `
-        <h2>New Section</h2>
-        <p>This is dynamically added content.</p>
-    `;
-    mainContent.appendChild(newContent);
-    */
 });

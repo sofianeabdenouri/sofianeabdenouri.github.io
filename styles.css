@@ -1,176 +1,174 @@
 body {
-    background-color: #041127;
-    color: #CCD6F6;
-    font-family: 'Roboto', sans-serif;
-  }
+  background-color: #041127;
+  color: #CCD6F6;
+  font-family: 'Roboto', sans-serif;
+}
 
 header {
-    background-color: #151515;
-    color: #CCD6F6;
-    padding: 1em 0;
+  background-color: #151515;
+  color: #CCD6F6;
+  padding: 1em 0;
 }
 
 nav {
-    background-color: #121212;
-    display: flex;
-    justify-content: space-between; /* Align items on both sides */
-    align-items: center; /* Center items vertically */
-    padding: 0 2em;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
 }
 
 .menu-bar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100%; /* Make sure it takes the full width */
-    justify-content: space-between; /* Spread out the home and right-links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .home-link {
-    margin-right: auto; /* Align the home link to the left */
+  margin-right: auto;
 }
 
 .right-links {
-    display: flex;
-    gap: 2em; /* Add some space between the right links */
+  display: flex;
+  gap: 2em;
 }
 
 .right-links li {
-    list-style: none;
+  list-style: none;
 }
 
 .right-links a {
-    color: #CCD6F6;
-    text-decoration: none;
+  color: #CCD6F6;
+  text-decoration: none;
 }
 
 .right-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main, section {
-    padding: 2em;
-    background-color: #CCD6F6;
-    margin: 1em auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  background-color: #CCD6F6;
+  margin: 1em auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #121212;
-    color: #CCD6F6;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
+  background-color: #121212;
+  color: #CCD6F6;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
 }
 
 main {
-    background-color: #011a39;  
-    color: #CCD6F6;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
+  background-color: #011a39;  
+  color: #CCD6F6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 section {
-    background-color: #011a39;  
-    color: #CCD6F6;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  
-  #projects {
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #CCD6F6;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .project {
-    position: relative;
-    background-color: #112240;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .project:hover {
-    transform: translateY(-10px);
-  }
-  
-  .project-title {
-    color: #64FFDA;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .project-description {
-    background-color: rgba(10, 25, 47, 0.85);
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
-    color: #CCD6F6;
-  }
-  
-  .project-tech-list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .project-tech-list li {
-    background-color: #233554;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  .project-image {
-    position: relative;
-    width: 450px;
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  
-  .project-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 1, 0.5);  /* Initial state with color overlay */
-    transition: background-color 0.3s;
-  }
-  
-  .project-image:hover::after {
-    background-color: rgba(0, 0, 0, 0);  /* Remove overlay on hover */
-  }
-  
-  .project-image:hover img {
-    opacity: 0.8;  /* Adjust opacity for hover effect */
-    transform: scale(1.2);  /* Expand image */
-  }
-  
-  
+  background-color: #011a39;  
+  color: #CCD6F6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#projects {
+  padding: 20px;
+}
+
+h2 {
+  color: #CCD6F6;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project {
+  position: relative;
+  background-color: #112240;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project-title {
+  color: #64FFDA;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  background-color: rgba(10, 25, 47, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  color: #CCD6F6;
+}
+
+.project-tech-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.project-tech-list li {
+  background-color: #233554;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.project-image {
+  position: relative;
+  width: 450px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-image .static-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.project-image .gif-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.project-image:hover .static-image {
+  opacity: 0; /* Hide the static image on hover */
+}
+
+.project-image:hover .gif-image {
+  display: block;
+  opacity: 1; /* Show the GIF on hover */
+}
