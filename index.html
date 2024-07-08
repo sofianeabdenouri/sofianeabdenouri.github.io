@@ -10,26 +10,25 @@
     <header>
         <nav>
             <ul class="menu-bar">
-                <li class="home-link"><a href="#top">Homepage</a></li>
-                <div class="right-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="assets/Sofiane-Abdenouri-Curriculum-Vitae-EN.pdf" target="_blank">Resume</a></li>
-                </div>
+                <li class="home-link"><a href="#top" class="homepage-button">Homepage</a></li>
+                <li><a href="#about" class="about-link">About</a></li>
+                <li><a href="#experience" class="experience-link">Experience</a></li>
+                <li><a href="#projects" class="projects-link">Projects</a></li>
+                <li><a href="#contact" class="contact-link">Contact</a></li>
+                <li><a href="assets/Sofiane-Abdenouri-Curriculum-Vitae-EN.pdf" target="_blank" class="resume-button">Resume</a></li>
             </ul>
         </nav>
     </header>
+    
     <main id="top">
         <div class="fadeup-enter-done" style="transition-delay: 100ms;">
-            <h5>Nice to meet you, I'm</h1>
+            <h5 class="special-text">Nice to meet you, I'm</h5>
         </div>
         <div class="fadeup-enter-done" style="transition-delay: 200ms;">
             <h1 class="big-heading">Sofiane Abdenouri</h1>
         </div>
         <div class="fadeup-enter-done" style="transition-delay: 300ms;">
-            <h1 class="big-heading">I build software.</h1>
+            <h2 class="big-heading">I build software!</h2>
         </div>
         <div class="fadeup-enter-done" style="transition-delay: 400ms;">
             <p>
@@ -40,17 +39,68 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>This is the about section.</p>
+        <p>Hello! My name is Sofiane and I enjoy creating experiences from my computer.
+        <br>
+            My interest in software development started back in 2010 when I used Piczo and Neocities to create webpages, learning the basics of HTML and CSS.
+            <br>
+            Later on, I would obtain a College Degree in Software Developpment.
+        <br>
+        My main focus these days is learning the most I can and implementing new technologies into my work. 
+            </p>
+
+            <div class="about-list">
+                <p>Here are a few technologies I've been working with recently:</p>
+                <div class="tech-columns">
+                    <ul>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                    <ul>
+                        <li>TypeScript</li>
+                        <li>Eleventy</li>
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+            </div>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        <p>This is the experience section.</p>
+        <p>Relatively new in the field, I am always seeking new opportunities.</p>
+        <div class="container">
+            <div class="sidebar">
+                <a href="#hypertec" onclick="showContent('hypertec')" class="active">Hypertec</a>
+                <a href="#mystery" onclick="showContent('mystery')">???</a>
+            </div>
+            <div class="content">
+                <div id="hypertec" class="active">
+                    <h2>Fullstack Developer <span style="color: #64FFDA;">@ Hypertec</span></h2>
+                    <h4>January 2023 - April 2023</h4>
+                    <ul>
+                        <li>Design interactive websites cataloging information libraries using PHP and Uniform Server Zero.
+                        <li>Develop an email signature application using C#, HTML, and CSS.
+                        <li>Implement a mobile application simulating a meal ordering platform under Android Studio using Java.
+                        <li>Conduct tests on prototypes and final products.
+                        <li>Perform code reviews, specifications, and project plans.
+                        <li>Develop custom user applications.    
+                    </ul>
+                </div>
+                <div id="mystery">
+                    <h2>??? <span style="color: #64FFDA;">@ ???</span></h2>
+                    <h4>??? - ???</h4>
+                    <ul>
+                        <li>Who knows what's next..?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
+
     <section id="projects">
-        <h2>Projects</h2>
-    
+        <h2 class="inline-heading">Projects</h2>
+        <h5 class="inline-heading, special-text" >hover over the photos for a quick demo</h5>    
         <div class="project">
             <div class="project-content">
                 <div>
@@ -86,7 +136,7 @@
             <div class="project-content">
                 <div>
                     <h3 class="project-title">
-                        <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">PHP website with Database</a>
+                        <a rel="noopener noreferrer" target="_blank">PHP website with Database</a>
                     </h3>
                     <div class="project-description">
                         <p>Local website created to use phpAdmin in a concrete way. It catalogues musicians and their works.</p>
@@ -100,13 +150,13 @@
                         <li>Documentation</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://darkhourdev.itch.io/the-best-game-ever" aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
+                        <a  aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="project-image">
-                <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">
+                <a  rel="noopener noreferrer" target="_blank">
                     <img src="image/php-project.png" alt="PHP Website" class="static-image">
                     <img src="image/php-project.gif" alt="PHP Website GIF" class="gif-image">
                 </a>
@@ -117,7 +167,7 @@
             <div class="project-content">
                 <div>
                     <h3 class="project-title">
-                        <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">Food Ordering Android App</a>
+                        <a  rel="noopener noreferrer" target="_blank">Food Ordering Android App</a>
                     </h3>
                     <div class="project-description">
                         <p>Mobile application made in Android Studio. The user first chooses the dish. The information related to it is shown on screen. Then they receive a SMS confirming the purchase.</p>
@@ -131,13 +181,13 @@
                         <li>Fullstack</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://darkhourdev.itch.io/the-best-game-ever" aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
+                        <a  aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="project-image">
-                <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">
+                <a  rel="noopener noreferrer" target="_blank">
                     <img src="image/android-app.png" alt="Android App" class="static-image">
                     <img src="image/android-app.gif" alt="Android App GIF" class="gif-image">
                 </a>
@@ -148,7 +198,9 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>This is the contact section.</p>
+        <p> I'm always looking for any new opportunities, my inbox is always open. Feel free to reach out!
+        </p>
+        <a href="mailto:sofianeabdenouri@gmail.com" class="email-button">Email Me</a>
     </section>
 
     <footer>
