@@ -5,68 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sofiane Abdenouri</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Left Side Social Links -->
+    <div class="left-social-links">
+        <ul>
+            <li><a href="https://github.com/sofianeabdenouri" target="_blank"><img src="image/github.png" alt="Github"></a></li>
+            <li><a href="https://linkedin.com/in/sofianeabdenouri" target="_blank"><img src="image/linkedin.png" alt="LinkedIn"></a></li>
+        </ul>
+    </div>
+
+    <!-- Right Side Email -->
+    <div class="right-email">
+        <a href="mailto:sofianeabdenouri@gmail.com"><img src="image/email.png" alt="sofianeabdenouri@gmail.com"></a>
+    </div>
+
     <header>
         <nav>
             <ul class="menu-bar">
-                <li class="home-link"><a href="#top" class="homepage-button">Homepage</a></li>
+                <li class="home-link"><a href="#reload" class="homepage-button" onclick="location.reload(); return false;" style="margin-left: 10px;">
+                    <img src="image/icon.png" alt="Homepage"></a></li>
                 <li><a href="#about" class="about-link">About</a></li>
                 <li><a href="#experience" class="experience-link">Experience</a></li>
                 <li><a href="#projects" class="projects-link">Projects</a></li>
                 <li><a href="#contact" class="contact-link">Contact</a></li>
-                <li><a href="assets/Sofiane-Abdenouri-Curriculum-Vitae-EN.pdf" target="_blank" class="resume-button">Resume</a></li>
+                <li><a href="/ResumeEN.pdf" target="_blank" class="resume-button">Resume</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main id="top">
-        <div class="fadeup-enter-done" style="transition-delay: 100ms;">
-            <h5 class="special-text">Nice to meet you, I'm</h5>
-        </div>
-        <div class="fadeup-enter-done" style="transition-delay: 200ms;">
-            <h1 class="big-heading">Sofiane Abdenouri</h1>
-        </div>
-        <div class="fadeup-enter-done" style="transition-delay: 300ms;">
-            <h2 class="big-heading">I build software!</h2>
-        </div>
-        <div class="fadeup-enter-done" style="transition-delay: 400ms;">
-            <p>
-                I'm a software engineer specializing in building remarkable experiences.
-            </p>
-        </div>
-    </main>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My name is Sofiane and I enjoy creating experiences from my computer.
-        <br>
-            My interest in software development started back in 2010 when I used Piczo and Neocities to create webpages, learning the basics of HTML and CSS.
-            <br>
-            Later on, I would obtain a College Degree in Software Developpment.
-        <br>
-        My main focus these days is learning the most I can and implementing new technologies into my work. 
-            </p>
 
-            <div class="about-list">
-                <p>Here are a few technologies I've been working with recently:</p>
-                <div class="tech-columns">
-                    <ul>
-                        <li>JavaScript (ES6+)</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                    </ul>
-                    <ul>
-                        <li>TypeScript</li>
-                        <li>Eleventy</li>
-                        <li>WordPress</li>
-                    </ul>
+    <main id="top">
+        <h5 class="special-text">Nice to meet you, I'm</h5>
+        <h1 class="big-heading" style="color: #CCD6F6;">Sofiane Abdenouri</h1>
+        <h2 class="big-heading">I build software!</h2>
+        <p>
+            I'm a software engineer specializing in building remarkable experiences.
+        </p>
+    </main>
+
+    <section id="about">
+        <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="section-line"></div>
+        </div>        
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! My name is Sofiane and I enjoy creating experiences from my computer.</p>
+                <p>
+                    My interest in software development started back in 2010 when I used <a href="https://en.wikipedia.org/wiki/Piczo" class="special-text" target="_blank" rel="noopener noreferrer">Piczo</a> and <a href="https://neocities.org/" class="special-text" target="_blank" rel="noopener noreferrer">Neocities</a> to create webpages, learning the basics of HTML and CSS.
+                </p>
+                <p>
+                    Fast forward to now, I obtained a <a href="https://www.cmontmorency.qc.ca/programmes/nos-programmes-detudes/techniques/techniques-de-linformatique-specialisation-informatique-de-gestion/description-du-programme/" class="special-text" target="_blank" rel="noopener noreferrer">College Degree in Software Development.</a>
+                </p>
+                <p>
+                    My main focus these days is learning the most I can and implementing new technologies into my work.
+                </p>
+
+                <div class="about-list">
+                    <p>Here are a few technologies I've been working with recently:</p>
+                    <div class="tech-columns">
+                        <ul>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                        </ul>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Swift</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div class="image-wrapper">
+                <img src="image/me.jpg" alt="Me" class="about-image">
+            </div>
+        </div>
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
+        <div class="section-heading">
+            <h2>Experience</h2>
+            <div class="section-line"></div>
+        </div>        
         <p>Relatively new in the field, I am always seeking new opportunities.</p>
         <div class="container">
             <div class="sidebar">
@@ -75,19 +99,18 @@
             </div>
             <div class="content">
                 <div id="hypertec" class="active">
-                    <h2>Fullstack Developer <span style="color: #64FFDA;">@ Hypertec</span></h2>
+                    <h2 style="color: #CCD6F6;">Fullstack Developer <span class="special-text">@ </span><a href="https://hypertec.com/" class="special-text" target="_blank" rel="noopener noreferrer">Hypertec</a></h2>
                     <h4>January 2023 - April 2023</h4>
                     <ul>
-                        <li>Design interactive websites cataloging information libraries using PHP and Uniform Server Zero.
-                        <li>Develop an email signature application using C#, HTML, and CSS.
-                        <li>Implement a mobile application simulating a meal ordering platform under Android Studio using Java.
-                        <li>Conduct tests on prototypes and final products.
-                        <li>Perform code reviews, specifications, and project plans.
-                        <li>Develop custom user applications.    
+                        <li>Process and manage hardware orders on SAP BusinessOne.</li>
+                        <li>Develop an email signature application using C#, HTML, and CSS.</li>
+                        <li>Created an application that requires the user's username and password for login authentication.</li>
+                        <li>Conduct tests on prototypes and final products.</li>
+                        <li>Perform code reviews, specifications, and project plans.</li>
                     </ul>
                 </div>
                 <div id="mystery">
-                    <h2>??? <span style="color: #64FFDA;">@ ???</span></h2>
+                    <h2 style="color: #CCD6F6;">??? <span style="color: #64FFDA;">@ ???</span></h2>
                     <h4>??? - ???</h4>
                     <ul>
                         <li>Who knows what's next..?</li>
@@ -97,10 +120,13 @@
         </div>
     </section>
 
-
     <section id="projects">
-        <h2 class="inline-heading">Projects</h2>
-        <h5 class="inline-heading, special-text" >hover over the photos for a quick demo</h5>    
+        <div class="section-heading">
+            <h2>Projects</h2>
+            <div class="section-line"></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="inline-heading special-text">hover over the photos for a quick demo</p> 
+        </div>        
         <div class="project">
             <div class="project-content">
                 <div>
@@ -109,7 +135,7 @@
                     </h3>
                     <div class="project-description">
                         <p>A 2D platformer browser game made in Unity using C#. Go from left to right to get to the finish line. Avoid obstacles by jumping past them!</p>
-                        <p>Putting my knowledge and love for C# to use in a way that provides instant feedback. Lots of problem solving. </p>
+                        <p>Putting my knowledge and love for C# to use in a way that provides instant feedback. Lots of problem solving. <span class="special-text">Try it out!</span></p>
                     </div>
                     <ul class="project-tech-list">
                         <li>Unity</li>
@@ -119,19 +145,19 @@
                         <li>Logic</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://darkhourdev.itch.io/the-best-game-ever" aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
-                        </a>
+                        <a href="https://darkhourdev.itch.io/the-best-game-ever" aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank"></a>
                     </div>
                 </div>
             </div>
             <div class="project-image">
-                <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">
-                    <img src="image/2Dgame.png" alt="Platformer Game" class="static-image">
-                    <img src="image/2Dgame.gif" alt="Platformer Game GIF" class="gif-image">
-                </a>
+                <div class="image-wrapper">
+                    <a href="https://darkhourdev.itch.io/the-best-game-ever" rel="noopener noreferrer" target="_blank">
+                        <img src="image/2Dgame.png" alt="Platformer Game" class="static-image">
+                        <img src="image/2Dgame.gif" alt="Platformer Game GIF" class="gif-image">
+                    </a>
+                </div>
             </div>
         </div>
-    
         <div class="project">
             <div class="project-content">
                 <div>
@@ -140,7 +166,7 @@
                     </h3>
                     <div class="project-description">
                         <p>Local website created to use phpAdmin in a concrete way. It catalogues musicians and their works.</p>
-                        <p>First time creating and using databases to their fullest proved to be quite the challenge. </p>
+                        <p>First time creating and using databases to their fullest proved to be quite the challenge.</p>
                     </div>
                     <ul class="project-tech-list">
                         <li>PHP</li>
@@ -150,24 +176,24 @@
                         <li>Documentation</li>
                     </ul>
                     <div class="project-links">
-                        <a  aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
-                        </a>
+                        <a aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank"></a>
                     </div>
                 </div>
             </div>
             <div class="project-image">
-                <a  rel="noopener noreferrer" target="_blank">
-                    <img src="image/php-project.png" alt="PHP Website" class="static-image">
-                    <img src="image/php-project.gif" alt="PHP Website GIF" class="gif-image">
-                </a>
+                <div class="image-wrapper">
+                    <a rel="noopener noreferrer" target="_blank">
+                        <img src="image/php-project.png" alt="PHP Website" class="static-image">
+                        <img src="image/php-project.gif" alt="PHP Website GIF" class="gif-image">
+                    </a>
+                </div>
             </div>
         </div>
-    
         <div class="project">
             <div class="project-content">
                 <div>
                     <h3 class="project-title">
-                        <a  rel="noopener noreferrer" target="_blank">Food Ordering Android App</a>
+                        <a rel="noopener noreferrer" target="_blank">Food Ordering Android App</a>
                     </h3>
                     <div class="project-description">
                         <p>Mobile application made in Android Studio. The user first chooses the dish. The information related to it is shown on screen. Then they receive a SMS confirming the purchase.</p>
@@ -181,27 +207,31 @@
                         <li>Fullstack</li>
                     </ul>
                     <div class="project-links">
-                        <a  aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
-                        </a>
+                        <a aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank"></a>
                     </div>
                 </div>
             </div>
             <div class="project-image">
-                <a  rel="noopener noreferrer" target="_blank">
-                    <img src="image/android-app.png" alt="Android App" class="static-image">
-                    <img src="image/android-app.gif" alt="Android App GIF" class="gif-image">
-                </a>
+                <div class="image-wrapper">
+                    <a rel="noopener noreferrer" target="_blank">
+                        <img src="image/android-app.png" alt="Android App" class="static-image">
+                        <img src="image/android-app.gif" alt="Android App GIF" class="gif-image">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p> I'm always looking for any new opportunities, my inbox is always open. Feel free to reach out!
+        <div class="section-heading">
+            <h2>Contact</h2>
+            <div class="section-line"></div>
+        </div>
+        <p> I'm always looking for any new opportunities, connections, events, etc. My inbox is always open. Feel free to reach out and see you soon!
         </p>
         <a href="mailto:sofianeabdenouri@gmail.com" class="email-button">Email Me</a>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 Sofiane Abdenouri</p>
