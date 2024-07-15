@@ -48,3 +48,7 @@ function showContent(id) {
     // Add active class to the clicked sidebar link
     document.querySelector('.sidebar a[href="#' + id + '"]').classList.add('active');
 }
+VanillaTilt.init(document.querySelectorAll(".about-image"), {
+    max: 25,
+    speed: 400
+});
