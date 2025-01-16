@@ -56,38 +56,47 @@
 
         contactForm: function () {
             $('.rwt-dynamic-form').on('submit', function (e) {
-				e.preventDefault();
-				var _self = $(this);
-				var __selector = _self.closest('input,textarea');
-				_self.closest('div').find('input,textarea').removeAttr('style');
-				_self.find('.error-msg').remove();
-				_self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
-				var data = $(this).serialize();
-				$.ajax({
-					url: 'mail.php',
-					type: "post",
-					dataType: 'json',
-					data: data,
-					success: function (data) {
-						_self.closest('div').find('button[type="submit"]').removeAttr('disabled');
-						if (data.code == false) {
-							_self.closest('div').find('[name="' + data.field + '"]');
-							_self.find('.rn-btn').after('<div class="error-msg"><p>*' + data.err + '</p></div>');
-						} else {
-							$('.error-msg').hide();
-							$('.form-group').removeClass('focused');
-							_self.find('.rn-btn').after('<div class="success-msg"><p>' + data.success + '</p></div>');
-							_self.closest('div').find('input,textarea').val('');
-
-							setTimeout(function () {
-								$('.success-msg').fadeOut('slow');
-							}, 5000);
-						}
-					}
-				});
-			});
+                e.preventDefault();
+                var _self = $(this);
+        
+                // Disable the submit button to prevent multiple submissions
+                _self.find('button[type="submit"]').attr('disabled', 'disabled');
+        
+                // Serialize the form data
+                var data = _self.serialize();
+        
+                // Send the AJAX request to Formspree
+                $.ajax({
+                    url: 'https://formspree.io/f/xbllbqoe', // Formspree endpoint
+                    type: "POST",
+                    dataType: 'json', // You can also use 'text' if Formspree returns plain text
+                    data: data,
+                    success: function () {
+                        // Enable the submit button
+                        _self.find('button[type="submit"]').removeAttr('disabled');
+        
+                        // Clear form fields
+                        _self.find('input, textarea').val('');
+        
+                        // Display success message
+                        _self.find('.rn-btn').after('<div class="success-msg"><p>Message sent successfully!</p></div>');
+        
+                        // Hide success message after 5 seconds
+                        setTimeout(function () {
+                            $('.success-msg').fadeOut('slow');
+                        }, 5000);
+                    },
+                    error: function () {
+                        // Enable the submit button
+                        _self.find('button[type="submit"]').removeAttr('disabled');
+        
+                        // Display error message
+                        _self.find('.rn-btn').after('<div class="error-msg"><p>Something went wrong. Please try again.</p></div>');
+                    }
+                });
+            });
         },
-
+        
         
         
         wowActive: function () {
