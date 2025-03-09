@@ -29,7 +29,8 @@
             imJs.awsActivation();
             imJs.demoActive();
             imJs.activePopupDemo();
-            
+            imJs.likeButtonEffect();
+            imJs.likeHeartEffect();  
         },
 
         
@@ -44,7 +45,97 @@
                 $('.demo-modal-area').addClass('white-version');
             })
         },
-
+        likeButtonEffect: function () {
+            $(".likeButton").on("click", function (e) {
+                e.preventDefault();
+        
+                let button = $(this);
+                let icon = button.find("i");
+                let text = button.find(".likeText");
+        
+                // Toggle class for effect
+                button.toggleClass("liked");
+        
+                // Animate the button
+                button.css("transform", "scale(1.2)");
+                setTimeout(() => button.css("transform", "scale(1)"), 300);
+        
+                if (button.hasClass("liked")) {
+                    icon.replaceWith('<i class="feather-heart text-red-500"></i>');
+                    text.text("LIKED");
+        
+                    // 🎉 Confetti Effect INSIDE the Modal
+                    let modal = button.closest(".modal"); // Get the parent modal
+                    let confettiCanvas = document.createElement("canvas");
+                    confettiCanvas.style.position = "absolute";
+                    confettiCanvas.style.top = "0";
+                    confettiCanvas.style.left = "0";
+                    confettiCanvas.style.width = "100%";
+                    confettiCanvas.style.height = "100%";
+                    confettiCanvas.style.pointerEvents = "none";
+                    confettiCanvas.style.zIndex = "99999"; // Ensure it appears over everything
+        
+                    modal.append(confettiCanvas); // Append canvas inside the modal
+        
+                    let confettiInstance = confetti.create(confettiCanvas, {
+                        resize: true,
+                        useWorker: true,
+                    });
+        
+                    confettiInstance({
+                        particleCount: 100,
+                        spread: 100,
+                        origin: { y: 0.5 },
+                    });
+        
+                    // Remove canvas after animation
+                    setTimeout(() => confettiCanvas.remove(), 1000);
+        
+                } else {
+                    icon.replaceWith('<i class="feather-thumbs-up"></i>');
+                    text.text("LIKE THIS");
+                }
+        
+                feather.replace(); // Update Feather Icons
+            });
+        }
+        
+        
+,        
+        
+        
+        likeHeartEffect: function () {
+            $(".meta a").on("click", function (e) {
+                e.preventDefault();
+        
+                let heart = $(this).find("i"); // Get the heart icon
+                let countSpan = $(this).parent(); // Get the parent <span>
+        
+                // Select the **actual number** (excluding the heart)
+                let countTextNode = countSpan.contents().filter(function () {
+                    return this.nodeType === 3; // Selects only the number text node
+                });
+        
+                if (countTextNode.length === 0) return; // Prevents errors if no number is found
+        
+                let count = parseInt(countTextNode.text().trim()); // Extract the number safely
+        
+                if (isNaN(count)) count = 0; // Fix NaN issue
+        
+                if (heart.hasClass("liked")) {
+                    heart.removeClass("liked text-red-500"); // Remove red color
+                    count -= 1;
+                } else {
+                    heart.addClass("liked text-red-500"); // Make heart red
+                    count += 1;
+                }
+        
+                countTextNode[0].nodeValue = ` ${count}`; // Update the number correctly
+            });
+        },
+        
+        
+        
         demoActive: function (e) {
             $('.rn-right-demo').on('click', function (e) {
                 $('.demo-modal-area').addClass('open');
@@ -54,6 +145,9 @@
             })
         },
 
+        
+        
+        
         contactForm: function () {
             $('.rwt-dynamic-form').on('submit', function (e) {
                 e.preventDefault();
